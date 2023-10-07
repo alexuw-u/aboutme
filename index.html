@@ -4,14 +4,43 @@
     <title>About Me</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
+        ::-webkit-scrollbar {
+        background-color: rgb(142, 142, 142);
+        width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background-color: rgb(71, 71, 71);
+        border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+        background-color: transparent;
+        }
         body {
+            scrollbar-width: thin;
+            scrollbar-color: rgb(71, 71, 71);
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-image: url("https://i.ibb.co/JQtSzR9/image-2023-09-23-192153568-auto-x2-auto-x2-auto-custom-1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .box {
+            position: relative;
+        }
+        .box::after {
+            content: "";
+            position: absolute;
+            top: -1.5%;
+            right: 8%;
+            bottom: -1%;
+            left: 8%;
+            background: rgba(255, 255, 255, 0.85); 
+            border-radius: 10px;
+            z-index: -1; 
         }
         .header {
             background-color: #333;
@@ -42,13 +71,38 @@
             padding: 10px;
             margin-top: auto;
         }
+        .button {
+            background-color: #575757;
+            border: none;
+            color: white;
+            padding: 15px 32px; 
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px; 
+            transition-duration: 0.4s; 
+        }
+
+        .button:hover {
+            background-color: rgb(207, 206, 206); 
+            color: black; 
+        }
+        .footer img {
+            width: 32px;
+            height: 32px;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="content">
-        <div class="header">
-            <h1>About Me</h1>
-        </div>
+    <div class="header">
+        <h1>About Me</h1>
+    </div>
+
+    <div class="box">
         <div class="section">
             <h2 style="text-align: center;">✨ Introduction ✨</h2>
             <p style="text-align: center;">Hi, I'm <strong>Alex</strong> (I've no idea why I put "uwu" after my name), I'm a part-time coder, I code when I like, lazy as hell, I'm a minor, I love watching Anime 😍, dry talker, <strong>totally</strong> not <strong>a racist</strong>.</p>
@@ -61,15 +115,15 @@
                     <p>I call myself a "Lua professional". 😎</p>
                 </div>
                 <div class="skill">
-                    <h3><img src="https://i.ibb.co/pR1D5mS/image-2023-10-04-173751246.png" alt="Lua" style="width: 32px; height: 32px; vertical-align: middle;">       Computer Science</h3>
+                    <h3><img src="https://i.ibb.co/pR1D5mS/image-2023-10-04-173751246.png" alt="Computer Science" style="width: 32px; height: 32px; vertical-align: middle;">       Computer Science</h3>
                     <p>Not a professional, but not amateur either. I believe that I have a lot of knowledge about computer science.</p>
                 </div>
                 <div class="skill">
-                    <h3><img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png" alt="Lua" style="width: 32px; height: 32px; vertical-align: middle;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="Lua" style="width: 32px; height: 32px; vertical-align: middle;">              HTML/CSS</h3>
-                    <p>School stuff, I don't give a fuck about HTML (but I do on CSS). But you see, this website is made from HTML & CSS.</p>
+                    <h3><img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png" alt="HTML" style="width: 32px; height: 32px; vertical-align: middle;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS" style="width: 32px; height: 32px; vertical-align: middle;"><img src="https://iconape.com/wp-content/png_logo_vector/javascript-logo.png" alt="JS" style="width: 32px; height: 32px; vertical-align: middle;">              HTML/CSS/Javascript</h3>
+                    <p>School stuff, I learn HTML from school, but I learn Javascript & CSS by myself. You see, my websites are made from HTML, CSS and Javascript.</p>
                 </div>
                 <div class="skill">
-                    <h3><img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="Lua" style="width: 29px; height: 32px; vertical-align: middle;">       C# (C sharp)</h3>
+                    <h3><img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="C# (C Sharp)" style="width: 29px; height: 32px; vertical-align: middle;">       C#</h3>
                     <p>Fuck you Unity. WhY DId I LeaRn ThIs ShIT!?!!</p>
                 </div>
             </div>
@@ -85,11 +139,33 @@
                     <h3>Project 2: Reverse Tower Defense Simulator (summer/2023)</h3>
                     <p>You might have guessed it—yep, it's another ROBLOX game! Basically, Tower Defense, but you are the bad guy. This project might be on the "Abandoned Project(s)" list soon; also, you guessed it again, I'm so fucking lazy to continue the project.</p>
                 </div>
+                <div class="portfolio-item">
+                    <h3>Project 3: Smurfcat trend (September/2023)</h3>
+                    <p>The we live, we love, we lie smurf cat trend on Tiktok (made with HTML)</p>
+                    <a href="https://alexuw-u.github.io/alexuwu/smurfcat.html" target="_blank">
+                        <button class="button"><strong>Try it here!</strong></button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="footer">
-        <h3>Discord: _alexuwu_</h3>
+        <br>
+        <a href="https://www.facebook.com/profile.php?id=100093068457613" target="_blank">
+            <img src="https://i.ibb.co/f09fSF2/image-2023-10-07-094720220-removebg-preview.png" alt="Facebook" />
+        </a>
+        <a href="https://steamcommunity.com/id/alexuw_u/" target="_blank">
+            <img src="https://www.freeiconspng.com/thumbs/steam-icon/steam-icon-19.png" alt="Steam" />
+        </a>
+        <a href="https://open.spotify.com/user/31ctqdttbsz2zc6ajkrxf73n3nvi?si=32e6039efddd4996" target="_blank">
+            <img src="https://i.ibb.co/gV73JmY/Spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://www.tiktok.com/@alexuw_u" target="_blank">
+            <img src="https://i.ibb.co/8zLHdy8/image-2023-10-07-094041497-removebg-preview.png" alt="TikTok" />
+        </a>
+        <p><strong>Discord: _alexuwu_</strong></p>
+        <p><strong>Email: ngocthienbaodo@gmail.com</strong></p>
     </div>
 </body>
 </html>
