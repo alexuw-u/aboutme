@@ -1,0 +1,65 @@
+<!--DISCORD: _alexuwu_-->
+<html>
+<head>
+  <title>.</title>
+  <script>
+    function show() {
+      setTimeout(function() {
+        document.getElementById("text1").style.display = "block";
+      }, 5020);
+      
+      setTimeout(function() {
+        document.getElementById("text2").style.display = "block";
+      }, 5935);
+      
+      setTimeout(function() {
+        document.getElementById("text3").style.display = "block";
+      }, 6960);
+      
+      setTimeout(function() {
+        document.body.style.backgroundImage = "url('https://i.kym-cdn.com/photos/images/newsfeed/002/652/421/280.jpg')";
+        document.body.style.backgroundSize = "100% 100%";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("text1").style.color = "white";
+        document.getElementById("text2").style.color = "white";
+        document.getElementById("text3").style.color = "white";
+        document.getElementById("credits").style.color = "black";
+      }, 7300);
+    }
+    
+    window.addEventListener('load', function() {
+  var audio = document.querySelector('audio');
+  
+  audio.addEventListener('ended', function() {
+    audio.currentTime = 0;
+    audio.pause();
+    resetElements();
+  });
+  
+  audio.addEventListener('pause', function() {
+    audio.currentTime = 0;
+    resetElements();
+  });
+  
+  function resetElements() {
+    document.getElementById("text1").style.display = "none";
+    document.getElementById("text2").style.display = "none";
+    document.getElementById("text3").style.display = "none";
+    document.body.style.backgroundImage = "none";
+    document.getElementById("text1").style.color = "black";
+    document.getElementById("text2").style.color = "black";
+    document.getElementById("text3").style.color = "black";
+    document.getElementById("credits").style.color = "black";
+  }
+});
+  </script>
+</head>
+<body>
+  <audio controls src="https://audio.jukehost.co.uk/ZKbcdg3WNfHnSxXz0VQCIkuWUDUOD58O.mp3" onplay="show();"></audio>
+  <h1 id="text1" style="display: none;">We live</h1>
+  <h1 id="text2" style="display: none;">We love</h1>
+  <h1 id="text3" style="display: none;">We lie</h1>
+  <h1 id="credits" style="position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%);">DISCORD: _alexuwu_</h1>
+</body>
+</html>
